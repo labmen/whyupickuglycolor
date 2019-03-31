@@ -1,0 +1,49 @@
+/* reset to 0 */
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+#container {
+    height: 100%;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.color-block {
+    width: 20%;
+    height: 20%;
+    float: left;
+    display: table;
+}
+
+.color-block > p {
+    display: none;
+    vertical-align: middle;
+}
+
+@keyframes grow {
+    from {
+        font-size: 0;
+    }
+    to {
+        font-size: 1.5em;
+    }
+}
+
+div.color-block:hover {
+    animation: grow 500ms;
+}
+
+div.color-block:hover > p {
+    display: table-cell;
+}
